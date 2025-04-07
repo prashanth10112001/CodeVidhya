@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
+.footer .footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.footerContent a {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer .copyRights {
+  font-size: 14px;
+  color: #6c757d;
+  text-align: center;
+  margin: 20px 0;
+}
