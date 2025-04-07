@@ -7,6 +7,11 @@ export const getLanguages = async () => {
   return response.data;
 };
 
+export const getDsaData = async () => {
+  const response = await axios.get(`${API_URL}/dsa`); // Corrected line
+  return response.data;
+};
+
 export const getMobileById = async (id) => {
   const response = await axios.get(`${API_URL}/mobile/${id}`); // Corrected line
   return response.data;

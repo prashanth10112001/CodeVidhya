@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 // import CategoryList from "../components/CategoryList";
 // import MobileList from "../components/MobileList";
 // import { getMobilesByCategory } from "../api/api";
-import { getLanguages } from "../api/api";
+import { getLanguages, getDsaData } from "../api/api";
 import "../styles/Home.css";
 import Cards from "../components/Cards";
 
 function Home() {
   // const [selectedCategory, setSelectedCategory] = useState("All");
   const [Languages, setLanguages] = useState([]);
+  const [DsaData, setDsaData] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [error, setError] = useState(null); // Add error state
 
@@ -30,6 +31,24 @@ function Home() {
     };
 
     fetchLanguages();
+
+    const fetchDsaData = async () => {
+      setLoading(true); // Set loading to true before fetching
+      setError(null); // Reset error state
+      try {
+        const data = await getDsaData();
+        setDsaData(data);
+        console.log("DsaData fetched:", data); // Log the fetched mobiles data
+
+        setLoading(false); // Set loading to false after fetching
+      } catch (err) {
+        setError(err); // Set error state if there's an error
+        setLoading(false); // Set loading to false on error
+        console.error("Error fetching DsaData:", err);
+      }
+    };
+
+    fetchDsaData();
   }, []);
 
   if (loading) {
@@ -61,7 +80,9 @@ function Home() {
         <div className="homeSection1">
           <div className="sec1Title">DSA</div>
           <div className="sec1Content">
-            <Cards />
+            {DsaData.map((Dsa) => (
+              <Cards key={Dsa._id} name={Dsa.name} img={Dsa.img} />
+            ))}
           </div>
         </div>
         <div className="homeSection1">
