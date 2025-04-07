@@ -63,6 +63,14 @@ function Home() {
     <>
       <div className="home">
         <div className="homeSection1">
+          <div className="sec1Title">DSA</div>
+          <div className="sec1Content">
+            {DsaData.map((Dsa) => (
+              <Cards key={Dsa._id} name={Dsa.name} img={Dsa.img} />
+            ))}
+          </div>
+        </div>
+        <div className="homeSection1">
           <div className="sec1Title">Languages</div>
           <div className="sec1Content">
             {/* <div>Python</div>
@@ -74,14 +82,6 @@ function Home() {
                 name={language.name}
                 img={language.img}
               />
-            ))}
-          </div>
-        </div>
-        <div className="homeSection1">
-          <div className="sec1Title">DSA</div>
-          <div className="sec1Content">
-            {DsaData.map((Dsa) => (
-              <Cards key={Dsa._id} name={Dsa.name} img={Dsa.img} />
             ))}
           </div>
         </div>
