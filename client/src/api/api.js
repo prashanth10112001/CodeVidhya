@@ -12,7 +12,8 @@ export const getDsaData = async () => {
   return response.data;
 };
 
-export const getMobileById = async (id) => {
-  const response = await axios.get(`${API_URL}/mobile/${id}`); // Corrected line
+export const getDsaDataTopics = async (id) => {
+  const response = await axios.get(`${API_URL}/dsaTopics`); // Corrected line
+  // const response = await axios.get(`${API_URL}/mobile/${id}`); // Corrected line
   return response.data;
 };
