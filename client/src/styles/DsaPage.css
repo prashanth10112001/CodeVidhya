@@ -1,0 +1,74 @@
+.dsaPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.dsaPage .dsaTopQuestions {
+  display: flex;
+  margin: 20px;
+  margin-top: 0px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.dsaPage .dsaTopQuestions .dsaTopics {
+  display: flex;
+  flex: 1;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+}
+
+.dsaPage .dsaTopQuestions .dsaQuestions {
+  display: flex;
+  flex: 3;
+  /* border: 1px solid black; */
+  border-radius: 5px;
+}
+
+.dsaTopics {
+  display: flex;
+  flex-direction: column;
+}
+
+.dsaTopics a {
+  text-decoration: none;
+  color: black;
+}
+
+.dsaTopics .dsaHeader {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.dsaTopics .dsaTopicTitle {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.dsaQuestions {
+  display: flex;
+  flex-direction: column;
+}
+
+.dsaQuestions a {
+  text-decoration: none;
+  color: black;
+}
+
+.dsaQuestions .dsaHeader {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.dsaQuestions .dsaTopicTitle {
+  border: 1px solid black;
+  padding: 10px;
+}

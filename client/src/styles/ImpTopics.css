@@ -1,0 +1,29 @@
+.impTopicsBox {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 7px;
+  gap: 10px;
+}
+
+.impTopicsBox a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.impTopicsBox .topicTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.impTopicsBox .topicTitle:hover {
+  transform: scale(0.9);
+}

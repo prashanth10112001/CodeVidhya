@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import DsaPage from "./pages/DsaPage";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dsa" element={<h1>DSA</h1>} />
+          <Route path="/dsa" element={<DsaPage />} />
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />

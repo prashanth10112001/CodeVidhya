@@ -1,0 +1,26 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.section .sectionTitle {
+  border: 1px solid black;
+  padding: 10px 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.section .sectionBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}

@@ -12,7 +12,12 @@ const topicSchema = new Schema(
       required: true,
     },
     questions: {
-      type: [String], // Array of strings for questions
+      type: [
+        {
+          question: { type: String, required: true },
+          link: { type: String, required: true },
+        },
+      ],
       required: true,
     },
     link: {

@@ -1,9 +1,18 @@
 import React from "react";
+import Section from "../components/Section";
+import "../styles/Home.css";
 
 function Home() {
   return (
     <>
-      <div>home</div>
+      <div className="home">
+        {/* <div> */}
+        <Section />
+        {/* </div>
+        <div> */}
+        <Section />
+        {/* </div> */}
+      </div>
     </>
   );
 }
